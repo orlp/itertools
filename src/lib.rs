@@ -1721,13 +1721,7 @@ pub trait Itertools : Iterator {
         where Self: Sized + Iterator<Item = T::Item>,
               T: traits::HomogeneousTuple
     {
-        match self.next_tuple() {
-            elt @ Some(_) => match self.next() {
-                Some(_) => None,
-                None => elt,
-            },
-            _ => None
-        }
+        self.next_tuple().filter(|_| self.next().is_none())
     }
 
 
