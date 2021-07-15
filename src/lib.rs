@@ -42,7 +42,7 @@
 //!
 //! ## Rust Version
 //!
-//! This version of itertools requires Rust 1.32 or later.
+//! This version of itertools requires Rust 1.34 or later.
 #![doc(html_root_url="https://docs.rs/itertools/0.8/")]
 
 #[cfg(not(feature = "use_std"))]
